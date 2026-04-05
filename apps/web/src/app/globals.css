@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 25% 96%;
+    --foreground: 142 30% 18%;
+    --card: 45 25% 98%;
+    --card-foreground: 142 30% 18%;
+    --popover: 45 25% 98%;
+    --popover-foreground: 142 30% 18%;
+    --primary: 142 35% 28%;
+    --primary-foreground: 45 25% 96%;
+    --secondary: 28 65% 48%;
+    --secondary-foreground: 45 25% 96%;
+    --muted: 45 20% 90%;
+    --muted-foreground: 142 20% 40%;
+    --accent: 68 40% 44%;
+    --accent-foreground: 45 25% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 25% 96%;
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 142 35% 28%;
+    --radius: 0.75rem;
+    
+    /* Dynamic Theme Colors (overridden by API) */
+    --color-primary: #2D5A3D;
+    --color-primary-dark: #1F4030;
+    --color-primary-light: #4A7C59;
+    --color-secondary: #D4853C;
+    --color-secondary-dark: #B86E2E;
+    --color-accent: #D4AF37;
+    --color-accent-dark: #B8941F;
+    --color-bg: #F8F6F0;
+    --color-border: #E8E2D5;
+    --color-text: #1a2e1a;
+    --color-text-light: #6b7280;
+
+    /* Legacy aliases */
+    --saffron: #FF9933;
+    --golden: var(--color-accent);
+    --terracotta: var(--color-secondary);
+    --forest-green: var(--color-primary);
+    --olive: var(--color-primary-light);
+    --cream: var(--color-bg);
+    --sand: var(--color-border);
+    --copper: #B87333;
+    --maroon: #800000;
+    --peacock: #1A5276;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background-color: var(--color-bg);
+    @apply text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Ancient Indian Design Patterns */
+.pattern-mandala {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 C55 25 75 45 100 50 C75 55 55 75 50 100 C45 75 25 55 0 50 C25 45 45 25 50 0Z' fill='none' stroke='%23D4AF37' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+.pattern-floral {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 Q35 15 30 25 Q25 15 30 5 M30 35 Q35 45 30 55 Q25 45 30 35 M5 30 Q15 25 25 30 Q15 35 5 30 M35 30 Q45 25 55 30 Q45 35 35 30' fill='none' stroke='%232D5A3D' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+.pattern-paisley {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 10 55 20 Q60 30 50 40 Q40 50 30 40 Q20 30 25 20 Q30 10 40 10' fill='none' stroke='%23D4853C' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+/* Lotus Divider */
+.lotus-divider {
+  position: relative;
+  text-align: center;
+}
+
+.lotus-divider::before {
+  content: '🪷';
+  font-size: 2rem;
+  color: var(--terracotta);
+}
+
+/* Decorative Corner Elements */
+.corner-ornament {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.3;
+}
+
+.corner-ornament::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--golden);
+  border-radius: 50% 0;
+}
+
+/* Sacred Geometry Decorative Elements */
+.sacred-geometry {
+  background-image: 
+    radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 70% 30%, rgba(45, 90, 61, 0.1) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(212, 133, 60, 0.05) 0%, transparent 40%);
+}
+
+/* Enhanced Button Styles with Indian Touch */
+@layer components {
+  .ayur-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary-ayur {
+    @apply inline-flex items-center justify-center px-8 py-4 
+           text-white font-medium rounded-full
+           transition-all duration-300
+           shadow-lg hover:shadow-xl text-sm;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+  .btn-primary-ayur:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-accent);
+  }
+  
+  .btn-secondary-ayur {
+    @apply inline-flex items-center justify-center px-8 py-4 
+           text-white font-medium rounded-full
+           transition-all duration-300
+           shadow-lg hover:shadow-xl text-sm;
+    background: linear-gradient(to right, var(--color-secondary), var(--color-secondary-dark));
+    border: 2px solid var(--color-secondary);
+  }
+  .btn-secondary-ayur:hover {
+    background: linear-gradient(to right, var(--color-secondary-dark), var(--color-secondary-dark));
+  }
+  
+  .btn-golden-ayur {
+    @apply inline-flex items-center justify-center px-8 py-4 
+           font-bold rounded-full
+           transition-all duration-300
+           shadow-lg hover:shadow-xl text-sm;
+    background: linear-gradient(to right, var(--color-accent), var(--color-accent-dark));
+    color: var(--color-primary);
+    border: 2px solid var(--color-accent);
+  }
+  .btn-golden-ayur:hover {
+    background: linear-gradient(to right, var(--color-accent-dark), var(--color-accent-dark));
+  }
+  
+  .card-ayur {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden
+           transition-all duration-300 hover:shadow-2xl;
+    border: 1px solid var(--color-border);
+  }
+  .card-ayur:hover {
+    border-color: var(--color-accent);
+  }
+  
+  .card-ayur-premium {
+    @apply bg-white rounded-2xl shadow-xl overflow-hidden
+           transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+    border: 2px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+  }
+  .card-ayur-premium:hover {
+    border-color: var(--color-accent);
+  }
+  
+  /* Section Styles */
+  .ayur-section {
+    @apply py-16 md:py-20 relative;
+  }
+  
+  /* Ancient Indian Text Styling */
+  .heading-sacred {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-light), var(--color-secondary));
+  }
+  
+  .heading-classical {
+    @apply font-serif text-3xl md:text-4xl font-bold pb-4 inline-block;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+  }
+  
+  .frame-ornate {
+    @apply relative p-1 rounded-2xl;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+  }
+  
+  .frame-ornate-inner {
+    @apply bg-white rounded-xl p-6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Glow Effects */
+  .glow-golden {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 30px rgba(45, 90, 61, 0.3);
+  }
+  
+  /* Text Shadow for Depth */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Smooth Gradient Backgrounds */
+  .bg-gradient-ayur {
+    background: linear-gradient(135deg, var(--color-bg) 0%, #FFF9F0 50%, var(--color-bg) 100%);
+  }
+  
+  /* Hover Lift Effect */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+}

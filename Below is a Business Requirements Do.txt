@@ -1,0 +1,568 @@
+Below is a Business Requirements Document (BRD) for building a dynamic website + patient portal + admin panel for the Ayurvedic clinic based on the reference site:
+https://www.ayurmantra.in/
+
+The clinic provides Ayurvedic treatments, detox programs, herbal products, skin care treatments, and wellness services.
+The new platform should support content management, patient engagement, appointment booking, and product/service management.
+
+Business Requirement Document (BRD)
+Project: AyurMantra Digital Platform
+
+Dynamic Website + Patient Portal + Admin Panel
+
+1. Project Overview
+1.1 Objective
+
+Develop a modern, scalable digital platform for AyurMantra clinic that includes:
+
+Public Website (End User Website)
+
+Patient Portal (Patient Login)
+
+Admin Panel (Clinic Staff & Owner)
+
+The system must allow administrators to manage website content, services, treatments, products, media, blogs, appointments, and patient records dynamically without developer intervention.
+
+2. Business Goals
+Primary Goals
+
+Improve online visibility and patient engagement
+
+Enable easy appointment booking
+
+Provide digital health records for patients
+
+Enable clinic staff to manage content and offerings
+
+Sell herbal products online (optional phase)
+
+Secondary Goals
+
+SEO optimized website
+
+Lead generation and patient conversion
+
+Digital clinic management
+
+3. Stakeholders
+Stakeholder	Role
+Clinic Owner	Business decisions, service management
+Clinic Staff	Appointment management, patient records
+Patients	Book appointments, view reports
+Admin	Manage website content and operations
+Developers	Build and maintain system
+4. System Architecture
+
+The system will have three core modules:
+
+End User Website
+
+Patient Portal
+
+Admin Dashboard
+
+User Website
+      |
+Patient Login Portal
+      |
+API Layer
+      |
+Admin Panel
+      |
+Database
+5. End User Website (Public Website)
+5.1 Home Page
+
+Features:
+
+Hero banner
+
+About AyurMantra
+
+Featured treatments
+
+Detox programs
+
+Herbal products
+
+Testimonials
+
+Blog highlights
+
+Call to action
+
+Appointment booking
+
+Dynamic from Admin.
+
+5.2 About Us Page
+
+Content sections:
+
+Clinic story
+
+Doctor profile
+
+Mission & philosophy
+
+Ayurveda approach
+
+Clinic facilities
+
+Admin editable.
+
+5.3 Treatments / Services Page
+
+Examples:
+
+Panchakarma
+
+Skin Treatments
+
+Detox Programs
+
+Massage Therapy
+
+Ayurvedic Medicine
+
+Wellness Programs
+
+Each service page contains:
+
+Description
+
+Benefits
+
+Treatment duration
+
+Price
+
+Doctor information
+
+Before/After gallery
+
+Book appointment
+
+5.4 Products Page
+
+List of herbal products including:
+
+Herbal medicines
+
+Skin care products
+
+Wellness products
+
+Features:
+
+Product images
+
+Price
+
+Description
+
+Add to cart (optional phase)
+
+Inquiry
+
+5.5 Appointment Booking
+
+Patients can:
+
+Select treatment
+
+Select doctor
+
+Choose date/time
+
+Submit booking request
+
+Integration possibilities:
+
+WhatsApp
+
+Email notification
+
+SMS alerts
+
+5.6 Blog / Health Articles
+
+Dynamic blog section:
+
+Topics:
+
+Ayurveda tips
+
+Detox lifestyle
+
+Diet guidance
+
+Skin care
+
+Admin managed.
+
+SEO optimized.
+
+5.7 Gallery
+
+Photo & video gallery.
+
+Examples:
+
+Clinic interior
+
+Treatments
+
+Events
+
+Patient transformations
+
+5.8 Testimonials
+
+Patient feedback section.
+
+Admin can:
+
+Add
+
+Approve
+
+Remove testimonials.
+
+5.9 Contact Page
+
+Includes:
+
+Google Map
+
+Address
+
+Phone
+
+WhatsApp
+
+Email
+
+Contact form
+
+6. Patient Portal (Login System)
+
+Patients can create an account.
+
+Features
+Profile Management
+
+Name
+
+Contact details
+
+Medical history
+
+Documents
+
+Appointment Management
+
+Patients can:
+
+Book appointment
+
+View upcoming appointments
+
+Cancel/reschedule
+
+Medical Records
+
+Patients can view:
+
+Prescriptions
+
+Treatment history
+
+Reports
+
+Doctor notes
+
+Online Consultation (Optional)
+
+Possible features:
+
+Video consultation
+
+Chat with doctor
+
+Notifications
+
+Patient receives:
+
+Appointment reminders
+
+Prescription updates
+
+Health tips
+
+7. Admin Panel
+
+Admin panel is the central control system.
+
+Accessible by:
+
+Owner
+
+Clinic staff
+
+Marketing team
+
+7.1 Dashboard
+
+Shows:
+
+Total patients
+
+Appointments today
+
+Revenue
+
+Products sold
+
+Website analytics
+
+7.2 User Management
+
+Admin can manage:
+
+Patients
+
+Staff accounts
+
+Doctors
+
+Features:
+
+Create
+
+Edit
+
+Suspend
+
+Delete
+
+7.3 Content Management (CMS)
+
+Admin can update website content.
+
+Manage:
+
+Home page sections
+
+About page
+
+Text content
+
+Images
+
+Videos
+
+No coding required.
+
+7.4 Treatment Management
+
+Admin can:
+
+Add new treatment
+
+Edit treatment details
+
+Upload treatment images
+
+Update pricing
+
+Assign doctor
+
+7.5 Product Management
+
+Admin can manage herbal products.
+
+Functions:
+
+Add product
+
+Edit product
+
+Upload images
+
+Update stock
+
+Update pricing
+
+Enable/disable product
+
+7.6 Blog Management
+
+Admin can:
+
+Create articles
+
+Upload featured image
+
+Add SEO keywords
+
+Publish/unpublish
+
+7.7 Appointment Management
+
+Admin can:
+
+View bookings
+
+Confirm appointments
+
+Reschedule
+
+Cancel
+
+Assign doctor
+
+Calendar view available.
+
+7.8 Media Library
+
+Admin can upload:
+
+Images
+
+Videos
+
+Documents
+
+Organized folder system.
+
+7.9 Testimonials Management
+
+Admin can:
+
+Approve reviews
+
+Edit content
+
+Remove testimonials
+
+7.10 Reports
+
+Admin can generate reports:
+
+Patient registrations
+
+Treatment popularity
+
+Appointment analytics
+
+Revenue reports
+
+Export options:
+
+Excel
+
+PDF
+
+8. Roles and Permissions
+Super Admin
+
+Full system access.
+
+Staff
+
+Limited access:
+
+Manage appointments
+
+View patient records
+
+Marketing Admin
+
+Manage content
+
+Blogs
+
+Media
+
+9. Non Functional Requirements
+Performance
+
+Page load < 3 seconds
+
+Security
+
+SSL encryption
+
+Secure login
+
+Data protection
+
+Scalability
+
+System should support:
+
+Multi clinic expansion
+
+Mobile app integration
+
+10. SEO Requirements
+
+SEO friendly URLs
+
+Meta tags
+
+Schema markup
+
+Blog content
+
+Fast loading pages
+
+11. Technology Stack (Suggested)
+
+Frontend
+
+React / Next.js
+
+Tailwind CSS
+
+Backend
+
+Node.js
+
+Database
+
+PostgreSQL
+
+CMS
+
+Custom Admin CMS
+
+Hosting
+
+to be decided
+
+12. Future Enhancements
+
+Phase 2 features:
+
+Ecommerce store
+
+Online payment
+
+Telemedicine
+
+Mobile app
+
+AI health chatbot
+
+Loyalty program
+
+13. Deliverables
+Deliverable	Description
+UI Design	Website + dashboard designs
+Frontend	User website
+Backend	API + admin system
+Patient Portal	Login system
+Admin Panel	CMS + management tools
+Testing	QA + security
+Deployment	Live server

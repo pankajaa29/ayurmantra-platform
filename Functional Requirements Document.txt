@@ -1,0 +1,560 @@
+# Functional Requirements Document (FRD)
+
+**Project:** AyurMantra Digital Platform
+**System:** Dynamic Website + Patient Portal + Admin Management System
+**Version:** 1.0
+
+---
+
+# 1. Introduction
+
+## 1.1 Purpose
+
+This document defines the **detailed functional requirements** for the AyurMantra digital platform. It describes the behavior of the system, the functions it must support, and how users interact with it.
+
+The system will include:
+
+1. Public Website (End-User Interface)
+2. Patient Portal
+3. Admin Management System (CMS + Clinic Operations)
+
+The platform must be **fully dynamic**, allowing clinic staff to manage all website content, treatments, media, products, and patient data through an admin interface without requiring developer intervention.
+
+---
+
+# 2. System Overview
+
+## 2.1 System Components
+
+| Component      | Description                                        |
+| -------------- | -------------------------------------------------- |
+| Public Website | Informational site for visitors and patients       |
+| Patient Portal | Secure login for patients                          |
+| Admin Panel    | Clinic management dashboard                        |
+| Database       | Stores all system data                             |
+| API Layer      | Handles communication between frontend and backend |
+
+---
+
+# 3. User Roles and Permissions
+
+## 3.1 Roles
+
+### Visitor
+
+Unregistered website users.
+
+Permissions:
+
+* Browse website
+* View treatments
+* Read blogs
+* Submit contact form
+* Book appointment
+
+---
+
+### Patient
+
+Registered user with login access.
+
+Permissions:
+
+* Manage profile
+* Book appointments
+* View medical records
+* Download prescriptions
+* View treatment history
+
+---
+
+### Clinic Staff
+
+Clinic operational staff.
+
+Permissions:
+
+* Manage appointments
+* View patient details
+* Upload prescriptions
+* Update patient treatment data
+
+---
+
+### Doctor
+
+Medical practitioner.
+
+Permissions:
+
+* View patient history
+* Add prescriptions
+* Upload treatment notes
+* Manage consultation records
+
+---
+
+### Admin
+
+System administrator.
+
+Permissions:
+
+* Full system control
+* Manage content
+* Manage users
+* Manage services
+* Manage products
+* Manage reports
+
+---
+
+# 4. Public Website Functional Requirements
+
+---
+
+# 4.1 Homepage
+
+## Description
+
+The homepage acts as the primary landing page providing overview information and directing users to major sections.
+
+## Functional Requirements
+
+| ID       | Requirement                                                   |
+| -------- | ------------------------------------------------------------- |
+| FR-HM-01 | System shall display dynamic homepage banner                  |
+| FR-HM-02 | System shall display featured treatments                      |
+| FR-HM-03 | System shall display clinic introduction                      |
+| FR-HM-04 | System shall display testimonials                             |
+| FR-HM-05 | System shall display latest blog posts                        |
+| FR-HM-06 | System shall display call-to-action buttons                   |
+| FR-HM-07 | System shall allow appointment booking directly from homepage |
+
+## Admin Capabilities
+
+Admin can:
+
+* Update homepage text
+* Change banners
+* Change featured services
+* Update images/videos
+* Modify call-to-action buttons
+
+---
+
+# 4.2 About Page
+
+## Description
+
+Provides information about the clinic and doctors.
+
+## Functional Requirements
+
+| ID       | Requirement                            |
+| -------- | -------------------------------------- |
+| FR-AB-01 | System shall display clinic history    |
+| FR-AB-02 | System shall display doctor profiles   |
+| FR-AB-03 | System shall display clinic philosophy |
+| FR-AB-04 | System shall display images and videos |
+
+## Admin Functions
+
+Admin shall:
+
+* Edit content
+* Upload doctor images
+* Add new doctors
+* Update doctor qualifications
+
+---
+
+# 4.3 Treatments / Services Module
+
+## Description
+
+Displays Ayurvedic treatments offered by the clinic.
+
+## Functional Requirements
+
+| ID       | Requirement                                |
+| -------- | ------------------------------------------ |
+| FR-SV-01 | System shall display list of treatments    |
+| FR-SV-02 | System shall display treatment detail page |
+| FR-SV-03 | System shall display treatment benefits    |
+| FR-SV-04 | System shall display treatment duration    |
+| FR-SV-05 | System shall display pricing               |
+| FR-SV-06 | System shall display treatment images      |
+| FR-SV-07 | System shall allow appointment booking     |
+
+## Admin Functions
+
+Admin shall:
+
+* Add new treatment
+* Edit treatment information
+* Upload treatment media
+* Set pricing
+* Enable/disable treatments
+
+---
+
+# 4.4 Products Module
+
+## Description
+
+Displays herbal products sold by the clinic.
+
+## Functional Requirements
+
+| ID       | Requirement                              |
+| -------- | ---------------------------------------- |
+| FR-PR-01 | System shall display product catalog     |
+| FR-PR-02 | System shall display product detail page |
+| FR-PR-03 | System shall show product description    |
+| FR-PR-04 | System shall show product price          |
+| FR-PR-05 | System shall show product images         |
+
+## Admin Functions
+
+Admin shall:
+
+* Add new product
+* Update price
+* Upload product images
+* Manage inventory
+* Enable/disable products
+
+---
+
+# 4.5 Blog Module
+
+## Description
+
+Provides educational health articles.
+
+## Functional Requirements
+
+| ID       | Requirement                          |
+| -------- | ------------------------------------ |
+| FR-BL-01 | System shall display blog listing    |
+| FR-BL-02 | System shall display blog details    |
+| FR-BL-03 | System shall display blog categories |
+| FR-BL-04 | System shall support SEO metadata    |
+| FR-BL-05 | System shall allow blog search       |
+
+## Admin Functions
+
+Admin shall:
+
+* Create blog
+* Edit blog
+* Delete blog
+* Upload images
+* Add SEO tags
+
+---
+
+# 4.6 Appointment Booking System
+
+## Description
+
+Allows patients to schedule appointments.
+
+## Functional Requirements
+
+| ID       | Requirement                       |
+| -------- | --------------------------------- |
+| FR-AP-01 | User shall select treatment       |
+| FR-AP-02 | User shall select doctor          |
+| FR-AP-03 | User shall select date            |
+| FR-AP-04 | User shall select time slot       |
+| FR-AP-05 | User shall submit booking request |
+| FR-AP-06 | System shall notify admin         |
+| FR-AP-07 | System shall notify patient       |
+
+## Appointment Workflow
+
+1. Patient selects service
+2. Selects doctor
+3. Selects date and slot
+4. Booking request submitted
+5. Admin confirms appointment
+6. Patient receives confirmation
+
+---
+
+# 4.7 Contact Module
+
+## Functional Requirements
+
+| ID       | Requirement                                          |
+| -------- | ---------------------------------------------------- |
+| FR-CT-01 | System shall display clinic contact information      |
+| FR-CT-02 | System shall display Google Map                      |
+| FR-CT-03 | System shall allow contact form submission           |
+| FR-CT-04 | System shall send contact form notification to admin |
+
+---
+
+# 5. Patient Portal Functional Requirements
+
+---
+
+# 5.1 Registration
+
+| ID        | Requirement                              |
+| --------- | ---------------------------------------- |
+| FR-REG-01 | User shall register using email or phone |
+| FR-REG-02 | System shall verify via OTP              |
+| FR-REG-03 | System shall create patient account      |
+| FR-REG-04 | System shall store patient details       |
+
+---
+
+# 5.2 Login
+
+| ID       | Requirement                           |
+| -------- | ------------------------------------- |
+| FR-LG-01 | Patient shall login using credentials |
+| FR-LG-02 | System shall authenticate credentials |
+| FR-LG-03 | System shall allow password reset     |
+
+---
+
+# 5.3 Patient Dashboard
+
+Displays patient information.
+
+Features:
+
+* Upcoming appointments
+* Treatment history
+* Medical reports
+* Prescriptions
+
+---
+
+# 5.4 Profile Management
+
+| ID        | Requirement                                |
+| --------- | ------------------------------------------ |
+| FR-PRO-01 | Patient shall edit personal information    |
+| FR-PRO-02 | Patient shall upload medical documents     |
+| FR-PRO-03 | System shall store patient medical history |
+
+---
+
+# 5.5 Appointment Management
+
+| ID        | Requirement                          |
+| --------- | ------------------------------------ |
+| FR-PAP-01 | Patient shall view appointments      |
+| FR-PAP-02 | Patient shall cancel appointment     |
+| FR-PAP-03 | Patient shall reschedule appointment |
+
+---
+
+# 5.6 Medical Records
+
+| ID       | Requirement                             |
+| -------- | --------------------------------------- |
+| FR-MR-01 | Patient shall view prescriptions        |
+| FR-MR-02 | Patient shall download medical reports  |
+| FR-MR-03 | Doctor shall upload reports             |
+| FR-MR-04 | System shall maintain treatment history |
+
+---
+
+# 6. Admin Panel Functional Requirements
+
+---
+
+# 6.1 Admin Authentication
+
+| ID        | Requirement                         |
+| --------- | ----------------------------------- |
+| FR-ADM-01 | Admin shall login securely          |
+| FR-ADM-02 | System shall authenticate admin     |
+| FR-ADM-03 | System shall support password reset |
+
+---
+
+# 6.2 Admin Dashboard
+
+Displays key metrics.
+
+Metrics include:
+
+* Total patients
+* Total appointments
+* Today's appointments
+* Revenue metrics
+* Recent activity
+
+---
+
+# 6.3 Patient Management
+
+| ID       | Requirement                      |
+| -------- | -------------------------------- |
+| FR-PM-01 | Admin shall view patient list    |
+| FR-PM-02 | Admin shall edit patient data    |
+| FR-PM-03 | Admin shall view medical records |
+| FR-PM-04 | Admin shall deactivate patients  |
+
+---
+
+# 6.4 Appointment Management
+
+| ID       | Requirement                        |
+| -------- | ---------------------------------- |
+| FR-AM-01 | Admin shall view appointments      |
+| FR-AM-02 | Admin shall confirm appointment    |
+| FR-AM-03 | Admin shall reschedule appointment |
+| FR-AM-04 | Admin shall cancel appointment     |
+| FR-AM-05 | Admin shall assign doctor          |
+
+---
+
+# 6.5 CMS Content Management
+
+Admin shall manage website content.
+
+Features:
+
+* Page content editing
+* Section management
+* Media uploads
+* Banner management
+
+---
+
+# 6.6 Service Management
+
+| ID       | Requirement                |
+| -------- | -------------------------- |
+| FR-SM-01 | Admin shall create service |
+| FR-SM-02 | Admin shall edit service   |
+| FR-SM-03 | Admin shall delete service |
+
+---
+
+# 6.7 Product Management
+
+| ID         | Requirement                |
+| ---------- | -------------------------- |
+| FR-PROD-01 | Admin shall add product    |
+| FR-PROD-02 | Admin shall update product |
+| FR-PROD-03 | Admin shall delete product |
+| FR-PROD-04 | Admin shall manage stock   |
+
+---
+
+# 6.8 Blog Management
+
+| ID       | Requirement             |
+| -------- | ----------------------- |
+| FR-BM-01 | Admin shall create blog |
+| FR-BM-02 | Admin shall edit blog   |
+| FR-BM-03 | Admin shall delete blog |
+
+---
+
+# 6.9 Media Library
+
+| ID       | Requirement                  |
+| -------- | ---------------------------- |
+| FR-MM-01 | Admin shall upload media     |
+| FR-MM-02 | Admin shall delete media     |
+| FR-MM-03 | Admin shall organize folders |
+
+---
+
+# 6.10 Reports Module
+
+System shall generate reports including:
+
+* Appointment analytics
+* Patient registrations
+* Treatment popularity
+* Revenue
+
+Export options:
+
+* Excel
+* PDF
+
+---
+
+# 7. Notification System
+
+Notifications shall include:
+
+* Appointment confirmation
+* Appointment reminders
+* Prescription updates
+* Blog updates
+
+Channels:
+
+* Email
+* SMS
+* WhatsApp (optional)
+
+---
+
+# 8. Security Requirements
+
+| ID        | Requirement                                |
+| --------- | ------------------------------------------ |
+| FR-SEC-01 | System shall encrypt passwords             |
+| FR-SEC-02 | System shall implement role-based access   |
+| FR-SEC-03 | System shall enforce secure authentication |
+| FR-SEC-04 | System shall protect patient medical data  |
+
+---
+
+# 9. Audit Logs
+
+System shall track:
+
+* Admin actions
+* Content changes
+* Appointment changes
+* User activity
+
+---
+
+# 10. System Integration
+
+Possible integrations:
+
+* Payment gateway
+* SMS gateway
+* Email service
+* WhatsApp notifications
+* Telemedicine platform
+
+---
+
+# 11. Performance Requirements
+
+| Requirement      | Target      |
+| ---------------- | ----------- |
+| Page load time   | < 3 seconds |
+| Concurrent users | 1000+       |
+| System uptime    | 99.9%       |
+
+---
+
+# 12. Future Enhancements
+
+Future system capabilities may include:
+
+* Ecommerce system
+* Telemedicine consultations
+* Mobile app
+* AI health assistant
+* Wellness subscription plans
+
