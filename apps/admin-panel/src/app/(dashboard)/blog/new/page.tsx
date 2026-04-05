@@ -61,7 +61,7 @@ export default function NewBlogPostPage() {
     excerpt: '',
     category: '',
     tags: [] as string[],
-    featuredImage: null as File | null,
+    featuredImage: '' as string,
     author: 'Dr. Rajesh Sharma',
     status: 'draft' as 'draft' | 'published' | 'scheduled',
     publishDate: new Date().toISOString().split('T')[0],
