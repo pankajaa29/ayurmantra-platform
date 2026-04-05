@@ -20,7 +20,7 @@ interface PageSection {
   type: string;
   order: number;
   visible: boolean;
-  content: Record<string, any>;
+  content: any;
 }
 
 interface SharedData {
