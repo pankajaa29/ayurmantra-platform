@@ -14,8 +14,10 @@
     "type-check": "turbo type-check",
     "clean": "turbo clean"
   },
+  "dependencies": {
+    "turbo": "^2.0.0"
+  },
   "devDependencies": {
-    "turbo": "^2.0.0",
     "typescript": "^5.3.3"
   },
   "packageManager": "pnpm@8.15.0",
