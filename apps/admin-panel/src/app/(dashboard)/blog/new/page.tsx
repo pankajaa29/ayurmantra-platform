@@ -224,7 +224,6 @@ export default function NewBlogPostPage() {
                 onInput={handleContentChange}
                 className="min-h-[400px] p-4 outline-none prose max-w-none"
                 dangerouslySetInnerHTML={{ __html: formData.content }}
-                placeholder="Start writing your blog post..."
               />
             </div>
 
