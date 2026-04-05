@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { treatmentsApi, appointmentsApi } from '@/lib/api';
 
@@ -11,7 +11,7 @@ const steps = [
   { id: 4, label: 'Confirm Booking' },
 ];
 
-export default function BookAppointmentPage() {
+function BookAppointmentForm() {
   const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [treatments, setTreatments] = useState<any[]>([]);
@@ -320,5 +320,22 @@ export default function BookAppointmentPage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function BookAppointmentPage() {
+  return (
+    <Suspense fallback={
+      <section className="ayur-section bg-ayur-cream">
+        <div className="ayur-container">
+          <div className="flex items-center justify-center py-24">
+            <div className="animate-spin text-4xl">⏳</div>
+            <span className="ml-4 text-xl text-ayur-primary font-medium">Loading Booking System...</span>
+          </div>
+        </div>
+      </section>
+    }>
+      <BookAppointmentForm />
+    </Suspense>
   );
 }
