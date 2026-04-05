@@ -32,7 +32,7 @@ export function FAQSection() {
       
       if (faqResponse.data) {
         setFaqs(faqResponse.data);
-        const uniqueCategories = [...new Set(faqResponse.data.map((f: FAQ) => f.category))];
+        const uniqueCategories = Array.from(new Set<string>(faqResponse.data.map((f: FAQ) => f.category)));
         setCategories(uniqueCategories);
         if (uniqueCategories.length > 0) {
           setOpenCategory(uniqueCategories[0]);
