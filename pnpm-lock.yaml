@@ -7,10 +7,11 @@ settings:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
       turbo:
         specifier: ^2.0.0
         version: 2.8.16
+    devDependencies:
       typescript:
         specifier: ^5.3.3
         version: 5.9.3
@@ -8558,7 +8559,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /turbo-darwin-arm64@2.8.16:
@@ -8566,7 +8567,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /turbo-linux-64@2.8.16:
@@ -8574,7 +8575,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /turbo-linux-arm64@2.8.16:
@@ -8582,7 +8583,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /turbo-windows-64@2.8.16:
@@ -8590,7 +8591,7 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /turbo-windows-arm64@2.8.16:
@@ -8598,7 +8599,7 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: true
+    dev: false
     optional: true
 
   /turbo@2.8.16:
@@ -8611,7 +8612,7 @@ packages:
       turbo-linux-arm64: 2.8.16
       turbo-windows-64: 2.8.16
       turbo-windows-arm64: 2.8.16
-    dev: true
+    dev: false
 
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
