@@ -11,7 +11,7 @@
     "db:studio": "prisma studio",
     "db:seed": "tsx prisma/seed.ts",
     "dev": "tsc --watch",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist generated"
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",

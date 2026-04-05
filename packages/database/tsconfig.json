@@ -21,6 +21,6 @@
     "outDir": "./dist",
     "rootDir": "."
   },
-  "include": ["prisma/**/*"],
+  "include": ["src/**/*", "prisma/**/*", "generated/**/*"],
   "exclude": ["node_modules", "dist"]
 }
